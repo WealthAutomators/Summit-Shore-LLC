@@ -64,10 +64,10 @@ export function ProductDetail({ product }: ProductDetailProps) {
           <ProductGallery images={product.images} name={product.name} />
 
           <div className="flex flex-col">
-            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-primary">
               {product.category}
             </p>
-            <h1 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl lg:text-4xl">
+            <h1 className="mt-2 font-serif text-3xl font-medium tracking-tight md:text-4xl lg:text-5xl">
               {product.name}
             </h1>
 
@@ -160,7 +160,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
         <div className="mt-16 space-y-12">
           <section>
-            <h2 className="text-xl font-semibold md:text-2xl">Product Description</h2>
+            <h2 className="font-serif text-2xl font-medium md:text-3xl">Product Description</h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">{product.description}</p>
             <ul className="mt-6 grid gap-2 sm:grid-cols-2">
               {product.features.map((feature) => (
@@ -173,7 +173,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold md:text-2xl">Specifications</h2>
+            <h2 className="font-serif text-2xl font-medium md:text-3xl">Specifications</h2>
             <dl className="mt-4 max-w-lg divide-y divide-border rounded-lg border border-border">
               {Object.entries(product.specifications).map(([key, value]) => (
                 <div key={key} className="flex justify-between px-4 py-3 text-sm">

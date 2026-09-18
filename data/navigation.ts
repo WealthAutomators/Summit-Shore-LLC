@@ -2,34 +2,41 @@ import { NavLink } from "@/types";
 import { categories } from "./categories";
 
 export const navigationLinks: NavLink[] = [
-  { label: "Home", href: "/" },
   { label: "Shop", href: "/shop" },
   {
-    label: "Categories",
+    label: "Collections",
     href: "/categories",
     children: categories.map((c) => ({
       label: c.name,
       href: `/categories/${c.slug}`,
     })),
   },
-  { label: "New Arrivals", href: "/new-arrivals" },
-  { label: "Best Sellers", href: "/best-sellers" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Home", href: "/categories/home" },
+  { label: "Outdoor", href: "/categories/outdoor-living" },
+  { label: "Travel", href: "/categories/travel" },
 ];
 
 export const footerLinks = {
-  company: [
-    { label: "About Us", href: "/about" },
-    { label: "Contact Us", href: "/contact" },
-    { label: "Careers", href: "/contact" },
-    { label: "FAQs", href: "/faq" },
+  shop: [
+    { label: "All Products", href: "/shop" },
+    { label: "New Arrivals", href: "/new-arrivals" },
+    { label: "Best Sellers", href: "/best-sellers" },
+    { label: "On Sale", href: "/shop?sale=true" },
   ],
+  collections: categories.slice(0, 8).map((c) => ({
+    label: c.name,
+    href: `/categories/${c.slug}`,
+  })),
   customerCare: [
     { label: "Track Order", href: "/track-order" },
     { label: "Returns", href: "/returns" },
-    { label: "Shipping Policy", href: "/shipping" },
+    { label: "Shipping", href: "/shipping" },
+    { label: "FAQs", href: "/faq" },
     { label: "Support", href: "/contact" },
+  ],
+  about: [
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },

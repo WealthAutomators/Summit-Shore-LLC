@@ -32,8 +32,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   return (
     <Container className="py-8 md:py-12">
-      <h1 className="text-3xl font-semibold tracking-tight">{category.name}</h1>
-      <p className="mt-2 text-muted-foreground">{category.description}</p>
+      <h1 className="font-serif text-4xl font-medium tracking-tight">{category.name}</h1>
+      <p className="mt-3 max-w-2xl text-muted-foreground">{category.description}</p>
       <p className="mt-1 text-sm text-muted-foreground">{products.length} products</p>
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
         {products.map((product) => (

@@ -16,10 +16,10 @@ interface PageHeroProps {
 
 export function PageHero({ title, description, breadcrumbs }: PageHeroProps) {
   return (
-    <div className="border-b border-border bg-muted/30">
-      <Container className="py-6 md:py-8">
-        <nav aria-label="Breadcrumb" className="mb-4">
-          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
+    <div className="border-b border-border bg-muted/40">
+      <Container className="py-8 md:py-12">
+        <nav aria-label="Breadcrumb" className="mb-5">
+          <ol className="flex flex-wrap items-center gap-1.5 text-xs uppercase tracking-[0.12em] text-muted-foreground">
             <li>
               <Link href="/" className="flex items-center gap-1 transition-colors hover:text-primary">
                 <Home className="h-3.5 w-3.5" />
@@ -40,10 +40,8 @@ export function PageHero({ title, description, breadcrumbs }: PageHeroProps) {
             ))}
           </ol>
         </nav>
-        {title && <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">{title}</h1>}
-        {description && (
-          <p className="mt-3 max-w-2xl text-muted-foreground leading-relaxed">{description}</p>
-        )}
+        {title && <h1 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">{title}</h1>}
+        {description && <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">{description}</p>}
       </Container>
     </div>
   );
@@ -58,17 +56,13 @@ interface PageSectionProps {
 export function PageSection({ title, children, className }: PageSectionProps) {
   return (
     <section className={cn("py-8 md:py-10", className)}>
-      {title && <h2 className="mb-4 text-xl font-semibold md:text-2xl">{title}</h2>}
-      <div className="prose-store text-muted-foreground leading-relaxed">{children}</div>
+      {title && <h2 className="mb-4 font-serif text-2xl font-medium md:text-3xl">{title}</h2>}
+      <div className="prose-store leading-relaxed text-muted-foreground">{children}</div>
     </section>
   );
 }
 
-interface PolicyListProps {
-  items: string[];
-}
-
-export function PolicyList({ items }: PolicyListProps) {
+export function PolicyList({ items }: { items: string[] }) {
   return (
     <ul className="mt-3 space-y-2">
       {items.map((item) => (

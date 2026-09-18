@@ -16,7 +16,7 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
   return (
     <div className="flex flex-col gap-4">
       <div
-        className="relative aspect-square overflow-hidden rounded-lg border border-border bg-muted"
+        className="relative aspect-square overflow-hidden bg-muted"
         onMouseEnter={() => setIsZoomed(true)}
         onMouseLeave={() => setIsZoomed(false)}
       >
@@ -39,7 +39,7 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
               key={index}
               onClick={() => setSelectedIndex(index)}
               className={cn(
-                "relative h-20 w-20 shrink-0 overflow-hidden rounded-md border-2 transition-colors",
+                "relative h-20 w-20 shrink-0 overflow-hidden border transition-colors",
                 selectedIndex === index ? "border-primary" : "border-border hover:border-primary/50"
               )}
             >

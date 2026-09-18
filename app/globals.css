@@ -1,19 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa;
-  --foreground: #1f2937;
-  --primary: #7c3aed;
-  --primary-foreground: #ffffff;
-  --accent: #f59e0b;
-  --accent-foreground: #ffffff;
-  --pink: #ec4899;
-  --muted: #f3f4f6;
-  --muted-foreground: #6b7280;
-  --border: #e5e7eb;
-  --ring: #7c3aed;
-  --card: #ffffff;
-  --radius: 12px;
+  --background: #f7f3ec;
+  --foreground: #2c2a26;
+  --primary: #3e5c6b;
+  --primary-foreground: #fbf9f6;
+  --accent: #3e5c6b;
+  --accent-foreground: #fbf9f6;
+  --muted: #efe8dc;
+  --muted-foreground: #6b655c;
+  --border: #ddd4c6;
+  --ring: #3e5c6b;
+  --card: #fbf9f6;
+  --sand: #e6dccb;
+  --sea-glass: #7a9a8a;
+  --taupe: #a89884;
+  --stone: #c4b8a8;
+  --radius: 2px;
 }
 
 @theme inline {
@@ -23,21 +26,31 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --color-pink: var(--pink);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --color-ring: var(--ring);
   --color-card: var(--card);
-  --font-sans: var(--font-inter);
-  --radius-lg: 12px;
-  --radius-xl: 12px;
+  --color-sand: var(--sand);
+  --color-sea-glass: var(--sea-glass);
+  --color-taupe: var(--taupe);
+  --color-stone: var(--stone);
+  --font-sans: var(--font-outfit);
+  --font-serif: var(--font-cormorant);
+  --radius-lg: 2px;
+  --radius-xl: 2px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-outfit), system-ui, -apple-system, sans-serif;
+}
+
+h1,
+h2,
+.font-serif {
+  font-family: var(--font-cormorant), "Times New Roman", serif;
 }
 
 @keyframes accordion-down {
@@ -68,4 +81,23 @@ html {
 
 body {
   overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: #d5e0e4;
+  color: var(--foreground);
 }

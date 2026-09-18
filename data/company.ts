@@ -1,22 +1,16 @@
 export const company = {
-  name: "AAM Partners LLC",
-  tagline: "Everything You Need. Delivered with Confidence.",
+  name: "SUMMIT & SHORE LLC",
+  shortName: "Summit & Shore",
+  tagline: "Quiet coastal sophistication.",
   description:
-    "AAM Partners LLC brings together quality products across multiple categories, helping families find everything they need in one trusted online marketplace.",
-  email: "aampartnersllc1@gmail.com",
+    "SUMMIT & SHORE LLC is a contemporary lifestyle retailer offering considered pieces for the home, table, outdoor living, travel, and everyday wardrobe.",
+  email: "SummitandShoreLLC@gmail.com",
   address: {
-    street: "717 S Military Hwy",
-    city: "Virginia Beach",
-    state: "VA",
-    zip: "23464",
+    street: "543 MONTAUK HWY",
+    city: "EAST QUOGUE",
+    state: "NY",
+    zip: "11942",
     country: "United States",
   },
-  social: {
-    instagram: "https://instagram.com/aampartnersllc",
-    facebook: "https://facebook.com/aampartnersllc",
-    twitter: "https://twitter.com/aampartnersllc",
-    pinterest: "https://pinterest.com/aampartnersllc",
-  },
-  hours: "Mon–Fri: 9am–6pm EST",
-  copyright: `© ${new Date().getFullYear()} AAM Partners LLC. All rights reserved.`,
+  copyright: `© ${new Date().getFullYear()} SUMMIT & SHORE LLC. All rights reserved.`,
 };
